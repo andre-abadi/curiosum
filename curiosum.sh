@@ -7,7 +7,7 @@ data="/volume1/transfer/curiosum"
 # you shoudln't need to change these variables
 today=$(date +"%Y-%m-%d-%H-%M-%S-%Z")
 logfile=$data/logs/$today.log
-duration=10
+duration=3600
 line="======================================================"
 # below  is because otherwise a 1s file gets made after duration
 let split=duration+1

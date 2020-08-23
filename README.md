@@ -5,25 +5,21 @@ Audio-only RTSP Recorder
 # References
 
 [OpenRTSP](http://www.live555.com/openRTSP/)
-[systemd creation](https://unix.stackexchange.com/a/435407)
-
-# Pre-Requisites
-
-- CCTV camera with an RTSP stream
-- Admin access to a linux computer running *systemd* (in this case Ubuntu)
 
 # Journal
 
 1. `sudo apt install livemedia-utils` (containing __openRTSP__)
 2. Clone this repo
-3. Add Service
+3. Edit Variables
 
-- Copy `curiosum.service` to `/etc/systemd/system/`
+- data
+- address
+- duration
 
-4. Start the Service
+4. Run File
 
-- `sudo systemctl start curiosum.service`
+`./curiosum.sh`
 
-5. Start Service on Boot
+5. Add to crontab
 
-- `sudo systemctl enable curiosum.service`
+- `@hourly /home/eagle/curiosum/curiosum.sh`
