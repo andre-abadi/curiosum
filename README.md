@@ -16,21 +16,9 @@ Audio-only RTSP Recorder
 
 1. `sudo apt install livemedia-utils` (containing __openRTSP__)
 2. Clone this repo
-3. Create systemd Service
+3. Add Service
 
--  `sudo vim etc/systemd/system/curiosum.service`
-
-```bash
-[Unit]
-Description=curiosum
-
-[Service]
-ExecStart=/home/eagle/curiosum/start.sh
-Restart=on-failure
-
-[Install]
-WantedBy=multi-user.target 
-```
+- Copy `curiosum.service` to `/etc/systemd/system/`
 
 4. Start the Service
 
