@@ -1,2 +1,2 @@
 #!/bin/bash
-rm -rfv /volume1/transfer/openRTSP/logs/* /volume1/transfer/openRTSP/recordings/*
+rm -rfv /volume1/transfer/curiosum/logs/*.log /volume1/transfer/curiosum/recordings/*.mp4
