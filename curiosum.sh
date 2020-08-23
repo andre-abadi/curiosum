@@ -39,3 +39,6 @@ openRTSP \
 cat $logfile | grep Outputting
 echo $line >> $logfile
 printf "Completed execution.\n" | tee -a $logfile
+
+
+# end of script
