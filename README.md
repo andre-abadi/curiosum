@@ -6,9 +6,14 @@ Audio-only RTSP Recorder
 
 [OpenRTSP](http://www.live555.com/openRTSP/)
 
+# Pre-Requisites
+
+- livemedia-utils (for openRTSP)
+- ffmpeg
+
+
 # Journal
 
-1. `sudo apt install livemedia-utils` (containing __openRTSP__)
 2. Clone this repo
 3. Edit Variables
 
