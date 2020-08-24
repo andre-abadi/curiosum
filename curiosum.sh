@@ -23,7 +23,9 @@ printf "  This script started at: '%s'\n" "${today}" | tee -a $logfile
 touch $logfile
 printf "  Storing data in: '%s'\n" "${data}" | tee -a $logfile
 printf "  Checking that subdirectories /recordings and /logs exist.\n" | tee -a $logfile
-mkdir -p "${data}" "${data}/logs/${datefolder}" "${data}/recordings/${datefolder}" | tee -a $logfile
+mkdir -p \
+    "${data}/logs/${datefolder}" \
+    "${data}/recordings/${datefolder}" | tee -a $logfile
 printf "  Logging to: '%s'\n" "${logfile}" | tee -a $logfile
 printf "  Running openRTSP for: '%s's\n" "${duration}" | tee -a $logfile
 echo $line >> $logfile
@@ -37,7 +39,7 @@ openRTSP \
     -Q \
     -d $duration \
     -P $split \
-    -F ${data}/recordings/${folder}/${today} \
+    -F ${data}/recordings/${datefolder}/${today} \
     $address \
     >> $logfile 2>&1
 
