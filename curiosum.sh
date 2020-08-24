@@ -9,7 +9,7 @@ data="/volume1/transfer/curiosum"
 # you shoudln't need to change these variables
 today=$(date +"%Y-%m-%d-%H-%M-%S-%Z")
 datefolder=$(date +"%Y-%m-%d")
-logfile=$data/logs/$datefolder/$today.log
+logfile=$data/logs/$datefolder/curiosum-$today.log
 duration=3600
 line="======================================================"
 # below  is because otherwise a 1s file gets made after duration
