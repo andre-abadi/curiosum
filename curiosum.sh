@@ -53,7 +53,8 @@ sha256sum ${data}/recordings/${datefolder}/${today}-00000-03601.mp4 \
 # blockchain off the previous log file
 echo $line >> $logfile
 printf "  Calculating SHA256 checksum of previous logfile for blockchain:\n" | tee -a $logfile
-$prevlog="find ${data}/logs -name '*.log' | tail -n 1"
+# scan logfiles and find second last file (last file is still being written-to)
+$prevlog="find ${data}/logs -name '*.log' | tail -n 2 | head -n 1"
 printf "  Previous logfile was: '%s'\n" "${prevlog}" | tee -a $logfile
 sha256sum $prevlog | tee -a $logfile
 
