@@ -9,9 +9,9 @@
 
 # Pre-Requisites
 
-    - livemedia-utils (for [OpenRTSP](http://www.live555.com/openRTSP/))
-    - [FFmpeg](https://ffmpeg.org/)
-    - [sha256sum](https://help.ubuntu.com/community/HowToSHA256SUM)
+- livemedia-utils (for [OpenRTSP](http://www.live555.com/openRTSP/))
+- [FFmpeg](https://ffmpeg.org/)
+- [sha256sum](https://help.ubuntu.com/community/HowToSHA256SUM)
 
 # Instructions
 
