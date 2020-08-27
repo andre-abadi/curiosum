@@ -5,6 +5,8 @@
 1. A possibly unimportant point of interest; a curiosity.
 2. Audio-only RTSP recording system and waveform generator for analysis.
 
+[![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/andre-abadi/curiosum/blob/master/LICENSE)
+
 # Pre-Requisites
 
 - livemedia-utils (for [OpenRTSP](http://www.live555.com/openRTSP/))
