@@ -1,5 +1,3 @@
-# curiosum
-
 **curiosum** (*plural* **curiosa**)
 
 /ˌkyː.riˈoː.zʏm/
