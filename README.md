@@ -1,6 +1,11 @@
 # curiosum
 
-Audio-only RTSP Recorder
+**curiosum** (*plural* **curiosa**)
+
+/ˌkyː.riˈoː.zʏm/
+
+1. A possibly unimportant point of interest; a curiosity.
+2. Audio-only RTSP recording system and waveform generator for analysis.
 
 # References
 
@@ -9,7 +14,7 @@ Audio-only RTSP Recorder
 
 - livemedia-utils (for [OpenRTSP](http://www.live555.com/openRTSP/))
 - [FFmpeg](https://ffmpeg.org/)
-- [SoX](http://sox.sourceforge.net/Main/HomePage)
+- [sha256sum](https://help.ubuntu.com/community/HowToSHA256SUM)
 
 
 # Instructions
@@ -25,3 +30,5 @@ Audio-only RTSP Recorder
 4. Add `curiosum.sh` to Crontab
 
 - `@hourly /home/eagle/curiosum/curiosum.sh`
+
+5. Run `explico.sh` to analyse a day's files
