@@ -5,15 +5,11 @@
 1. A possibly unimportant point of interest; a curiosity.
 2. Audio-only RTSP recording system and waveform generator for analysis.
 
-# References
-
-
 # Pre-Requisites
 
 - livemedia-utils (for [OpenRTSP](http://www.live555.com/openRTSP/))
 - [FFmpeg](https://ffmpeg.org/)
 - [sha256sum](https://help.ubuntu.com/community/HowToSHA256SUM)
-
 
 # Instructions
 
@@ -23,7 +19,6 @@
 - data
 - address
 - duration
-
 
 4. Add `curiosum.sh` to Crontab
 
