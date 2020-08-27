@@ -24,6 +24,6 @@
 
 4. Add `curiosum.sh` to Crontab
 
-    - `@hourly /home/eagle/curiosum/curiosum.sh`
+    - `@hourly /home/user/curiosum/curiosum.sh`
 
 5. Run `explico.sh` to analyse a day's files
