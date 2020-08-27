@@ -4,27 +4,24 @@ Audio-only RTSP Recorder
 
 # References
 
-[OpenRTSP](http://www.live555.com/openRTSP/)
 
 # Pre-Requisites
 
-- livemedia-utils (for openRTSP)
-- ffmpeg
+- livemedia-utils (for [OpenRTSP](http://www.live555.com/openRTSP/))
+- [FFmpeg](https://ffmpeg.org/)
+- [SoX](http://sox.sourceforge.net/Main/HomePage)
 
 
-# Journal
+# Instructions
 
 2. Clone this repo
-3. Edit Variables
+3. Edit Variables in `curiosum.sh`
 
 - data
 - address
 - duration
 
-4. Run File
 
-`./curiosum.sh`
-
-5. Add to crontab
+4. Add `curiosum.sh` to Crontab
 
 - `@hourly /home/eagle/curiosum/curiosum.sh`

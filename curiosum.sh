@@ -9,7 +9,7 @@ data="/volume1/transfer/curiosum"
 # you shoudln't need to change these variables
 today=$(date +"%Y-%m-%d-%H-%M-%S-%Z")
 datefolder=$(date +"%Y-%m-%d")
-logfile=$data/logs/$datefolder/curiosum-$today.log
+logfile=$data/logs/$datefolder/$today-curiosum.log
 duration=3600
 line="======================================================"
 # below  is because otherwise a 1s file gets made after duration
@@ -42,6 +42,21 @@ openRTSP \
     -F ${data}/recordings/${datefolder}/${today} \
     $address \
     >> $logfile 2>&1
+
+
+#calculate checksum
+echo $line >> $logfile
+printf "  Calculating SHA256 checksum of recording file just completed:\n " | tee -a $logfile
+sha256sum ${data}/recordings/${datefolder}/${today}-00000-03601.mp4 \
+    | tee -a $logfile
+
+# blockchain off the previous log file
+echo $line >> $logfile
+printf "  Calculating SHA256 checksum of previous logfile for blockchain:\n" | tee -a $logfile
+$prevlog="find ${data}/logs -name '*.log' | tail -n 1"
+printf "  Previous logfile was: '%s'\n" "${prevlog}" | tee -a $logfile
+sha256sum $prevlog | tee -a $logfile
+
 
 # conclusion
 cat $logfile | grep Outputting

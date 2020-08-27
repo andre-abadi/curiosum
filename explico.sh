@@ -33,7 +33,17 @@ find $data/recordings/$target/*.mp4 \
 echo $line >> $logfile
 cat $list >> $logfile
 mkdir -p $analysis/$target
-ffmpeg -f concat -safe 0 -i $list -c copy $analysis/$target/$target.aac
+# https://trac.ffmpeg.org/wiki/Concatenate
+ffmpeg -f concat -safe 0 -i $list  $analysis/$target/$target.aac | tee -a $logfile
+# https://stackoverflow.com/a/9956920
+ffmpeg -i $analysis/$target/$target.aac \
+    -filter_complex \
+    "aformat=channel_layouts=mono, \
+    showwavespic=s=1600x400: \
+    scale=cbrt" \
+    -vframes 1 \
+    $analysis/$target/$target.png \
+    | tee -a $logfile
 
 # conclusion
 echo $line >> $logfile
